@@ -1,6 +1,7 @@
 package com.android.samples.mediastore
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -76,12 +77,12 @@ fun GalleryScreen(viewModel: MainActivityViewModel = viewModel()) {
         } else {
             LazyVerticalGrid(
                 columns = GridCells.Fixed(2),
-//                contentPadding = PaddingValues(
-//                    top = innerPadding.calculateTopPadding() + 8.dp,
-//                    bottom = innerPadding.calculateBottomPadding() + 8.dp,
-//                    start = 8.dp,
-//                    end = 8.dp
-//                ),
+                contentPadding = PaddingValues(
+                    top = innerPadding.calculateTopPadding() + 8.dp,
+                    bottom = innerPadding.calculateBottomPadding() + 8.dp,
+                    start = 8.dp,
+                    end = 8.dp
+                ),
                 modifier = Modifier.fillMaxSize().padding(innerPadding)
             ) {
                 items(images) { imageFile ->
